@@ -28,8 +28,8 @@ public:
         setWidth(_width);
         return _width;
     }
-    stringstream evaluate() {
-        stringstream psCode;
+    ofstream evaluate() {
+        ofstream psCode;
         psCode << "new path \n 72 72 moveto \n 0 " << this->_height << " rlineto \n" << this->_width <<" 0 rlineto \n 0 " << (-1)*this->_height << " rlineto \n closepath \n stroke \n showpage \n";
             return psCode;
     }
