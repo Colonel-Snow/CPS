@@ -8,7 +8,7 @@
 
 #ifndef triangle_h
 #define triangle_h
-#include string
+
 #include "polygon.h"
 
 class Triangle: public Shape{
@@ -33,7 +33,7 @@ public:
         setWidth(_sideLength);
         return _width;
     }
-    std::string evaluate(){
+    ofstream evaluate(){
         Polygon tri(3, _sideLength);
         return tri.evaluate();
     }

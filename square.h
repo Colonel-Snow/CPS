@@ -12,13 +12,13 @@
 
 class Square: public Shape{
 public:
-    Square(double sideLength):_sidelength(sideLength)
+    Square(double sideLength):_sideLength(sideLength)
     {}
     
     void setHeight(double height){
         _height = height;
     }
-    void setWidth(width){
+    void setWidth(double width){
         _width = width;
     }
     double getHeight(){
@@ -29,7 +29,7 @@ public:
         setWidth(_sideLength);
         return _width;
     }
-    std::string evaluate(){
+    ofstream evaluate(){
         Polygon sq(3, _sideLength);
         return sq.evaluate();
     }

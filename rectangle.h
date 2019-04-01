@@ -8,7 +8,7 @@
 
 #ifndef rectangle_h
 #define rectangle_h
-#include string
+
 
 class Rectangle: public Shape{
 public:
@@ -17,7 +17,7 @@ public:
     void setHeight(double height){
         _height = height;
     }
-    void setWidth(width){
+    void setWidth(double width){
         _width = width;
     }
     double getHeight(){
@@ -28,9 +28,10 @@ public:
         setWidth(_width);
         return _width;
     }
-    std::string evaluate() {
-        std::string psCode = "new path \n 72 72 moveto \n 0 " + this._height + " rlineto \n "
-                + this._width + " 0 rlineto \n 0 " + (-1)*this._height " rlineto \n closepath \n stroke \n showpage \n";
+    stringstream evaluate() {
+        stringstream psCode;
+        psCode << "new path \n 72 72 moveto \n 0 " << this->_height << " rlineto \n "
+        << this->_width << " 0 rlineto \n 0 " << (-1)*this->_height << " rlineto \n closepath \n stroke \n showpage \n";
         return psCode;
     }
 
