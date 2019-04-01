@@ -15,8 +15,6 @@ using std::ofstream;
 int runPostScript() {
     ofstream myfile;
     myfile.open ("CtoPS.ps");
-    Circle circle(100);
-    circle.evaluate();
     myfile << "%! \n";
     myfile.close();
     return 0;
