@@ -54,8 +54,8 @@ public:
         setWidth(_numSides);
         return _width;
     }
-    ofstream evaluate(){
-        ofstream psCode;
+    std::ofstream evaluate(){
+        std::ofstream psCode;
         // horizontal line
         if(_numSides == 1){
             psCode << "72 72  moveto \n" + std::to_string(_sideLength) + " 0 rlineto \n stroke \n closepath \n showpage";

@@ -33,8 +33,8 @@ public:
         return _width;
     }
     
-    ofstream evaluate(){
-        ofstream psCode;
+    std::ofstream evaluate(){
+        std::ofstream psCode;
         psCode << "180 252 " + std::to_string(_radius) + " 0 360 arc closepath \n";
         return psCode;
     }
