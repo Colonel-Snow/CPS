@@ -8,6 +8,8 @@
 #include "Shape.h"
 #ifndef polygon_h
 #define polygon_h
+#include <cmath>
+#include
 class Polygon: public Shape{
 public:
     Polygon(int numSides, double sideLength): _numSides(numSides),_sideLength(sideLength)
@@ -53,7 +55,27 @@ public:
         setWidth(_numSides);
         return _width;
     }
-    
+    std::string evaluate(){
+        std::string psCode;
+        // horizontal line
+        if(_numSides == 1){
+            psCode = "72 72  moveto \n" + _sideLength + " 0 rlineto \n stroke \n closepath \n showpage";
+            return psCode;
+        }
+        // triangle
+        else if(_numSides == 3){
+            psCode = "newpath \n 72 72 moveto \n" + _sideLength + " 0 rlineto \n"
+                    + 72/2 + " " _sideLength*sqrt(3)/2 + " rlineto \n closepath \n stroke \n showpage";
+            return psCode;
+        }
+        // square
+        else if(_numSides == 4){
+            psCode = "new path \n 72 72 moveto \n 0 " + _sideLength + " rlineto \n "
+                    + _sideLength + " 0 rlineto \n 0 " + _sideLength " rlineto \n closepath \n stroke \n showpage \n";
+            return psCode;
+        }
+
+    }
 private:
     double _height;
     double _width;

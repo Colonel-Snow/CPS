@@ -32,6 +32,10 @@ public:
         setWidth(_radius);
         return _width;
     }
+    std::string evaluate(){
+        std::string psCode = "180 252 " + radius + " 0 360 arc closepath \n";
+        return psCode;
+    }
     
 private:
     double _radius;
