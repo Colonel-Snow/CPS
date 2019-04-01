@@ -8,6 +8,8 @@
 
 #ifndef square_h
 #define square_h
+#include "polygon.h"
+
 class Square: public Shape{
 public:
     Square(double sideLength):_sidelength(sideLength)
@@ -27,6 +29,11 @@ public:
         setWidth(_sideLength);
         return _width;
     }
+    std::string evaluate(){
+        Polygon sq(3, _sideLength);
+        return sq.evaluate();
+    }
+
 private:
     double _height;
     double _width;
