@@ -40,6 +40,7 @@ public:
     }
     
 private:
+    std::string _filename;
     double _radius;
     double _width;
     double _height;
