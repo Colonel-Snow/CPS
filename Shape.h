@@ -7,7 +7,16 @@
 
 
 class Shape {
-
+public:
+    Shape() = default;
+    void setHeight(double height);
+    void setWidth(double width);
+    double getHeight(){ return _height; }
+    double getWidth(){ return _width; }
+    virtual ~Shape() = default;
+protected:
+    double _height = 0;
+    double _width = 0;
 };
 
 
