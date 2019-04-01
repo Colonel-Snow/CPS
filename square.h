@@ -29,7 +29,7 @@ public:
         setWidth(_sideLength);
         return _width;
     }
-    ofstream evaluate(){
+    std::ofstream evaluate(){
         Polygon sq(3, _sideLength);
         return sq.evaluate();
     }

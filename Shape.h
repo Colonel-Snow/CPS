@@ -12,11 +12,11 @@ class Shape {
 public:
     Shape():_filename("CtoPS.ps"), _currentPoint(306,396), _height(72), _width(72)
     {}
-    void setHeight(double height);
-    void setWidth(double width);
+    void setHeight(double height){_height = height;}
+    void setWidth(double width){_width = width;}
     void setCenterPoint();
-    double getHeight(){ return _height; }
-    double getWidth(){ return _width; }
+    double getHeight() const {return _height;}
+    double getWidth() const {return _width;}
     virtual ~Shape() = default;
 protected:
     std::ofstream _file;

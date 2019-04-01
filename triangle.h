@@ -33,7 +33,7 @@ public:
         setWidth(_sideLength);
         return _width;
     }
-    ofstream evaluate(){
+    std::ofstream evaluate(){
         Polygon tri(3, _sideLength);
         return tri.evaluate();
     }
