@@ -16,7 +16,7 @@ public:
         _width = getWidth();
     }
     
-    void setHeight(int sides){
+    void setHeight(int numSides){
         if(_numSides % 2 == 1){
             _height = exp(1+cos(M_PI/_numSides))/(2*sin(M_PI/_numSides));
         }
