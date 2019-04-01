@@ -2,6 +2,7 @@
 // Created by kerne on 3/22/2019.
 //
 #include <iostream>
+using std::ofstream
 #include "polygon.h"
 #include "circle.h"
 #include "polygon.h"
@@ -10,10 +11,10 @@
 #include "square.h"
 #include "triangle.h"
 
-int main(){
-    Polygon hexagon(6, 1.0);
-    std::cout << hexagon.getHeight() << std::endl;
-    Circle circle(3);
-    std::cout << circle.getWidth() << std::endl;
+int main () {
+    ofstream myfile;
+    myfile.open ("CtoPS.ps");
+    myfile << "%! \n";
+    myfile.close();
     return 0;
 };

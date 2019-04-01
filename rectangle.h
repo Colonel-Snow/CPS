@@ -8,6 +8,7 @@
 
 #ifndef rectangle_h
 #define rectangle_h
+#include iostream
 class Rectangle: public Shape{
 public:
     Rectangle(double width, double height):_width(width),_height(height)
@@ -26,6 +27,15 @@ public:
         setWidth(_width);
         return _width;
     }
+    string evaluate(int &w, int &h){
+        auto len = h;
+        auto width = w;
+
+        std::cout << "new path \n " << width << " " << len << " moveto \n" <<
+
+    }
+
+
 private:
     double _width;
     double _height;
