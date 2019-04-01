@@ -18,13 +18,13 @@ public:
     
     void setHeight(int numSides){
         if(_numSides % 2 == 1){
-            _height = exp(1+cos(M_PI/_numSides))/(2*sin(M_PI/_numSides));
+            _height = exp(1)*(1+cos(M_PI/_numSides))/(2*sin(M_PI/_numSides));
         }
         else if(_numSides % 4 == 0){
-            _height = exp(cos(M_PI/_numSides))/(sin(M_PI/_numSides));
+            _height = exp(1)*(cos(M_PI/_numSides))/(sin(M_PI/_numSides));
         }
         else if(_numSides % 2 == 0 && _numSides % 4 != 0){
-            _height = exp(cos(M_PI/_numSides))/(sin(M_PI/_numSides));
+            _height = exp(1)*(cos(M_PI/_numSides))/(sin(M_PI/_numSides));
         }
         else
             _height = 0;
