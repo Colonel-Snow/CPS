@@ -74,7 +74,6 @@ public:
         return psCode;
     }
 private:
-    stringstream _psCode;
     double _height;
     double _width;
     int _numSides;

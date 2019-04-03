@@ -16,13 +16,13 @@ int main() {
     ofstream myfile;
     myfile.open ("CtoPS.ps");
     myfile << "%! \n";
-    myfile << Circle(100).evaluate();
-    myfile << Polygon(1, 200).evaluate();
-    myfile << Polygon(2, 200).evaluate();
-    myfile << Polygon(3, 100).evaluate();
-    myfile << Rectangle(300, 200).evaluate();
-    myfile << Spacer(300, 200).evaluate();
-    myfile << Square(200).evaluate();
+    //myfile << Circle(100).evaluate();
+    //myfile << Polygon(1, 200).evaluate();
+    //myfile << Polygon(4, 200).evaluate();
+    //myfile << Polygon(3, 100).evaluate(); // triangle is rotated weird
+    //myfile << Rectangle(300, 200).evaluate();
+    //myfile << Spacer(300, 200).evaluate();
+    //myfile << Square(200).evaluate();
     myfile << Triangle(100).evaluate();
     myfile.close();
     return 0;
