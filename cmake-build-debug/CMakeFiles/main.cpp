@@ -11,6 +11,11 @@ using std::ofstream;
 #include "spacer.h"
 #include "square.h"
 #include "triangle.h"
+#include "rotated.h"
+#include "scaled.h"
+#include "layered.h"
+#include "vertical.h"
+#include "horizontal.h"
 
 int main() {
     ofstream myfile;

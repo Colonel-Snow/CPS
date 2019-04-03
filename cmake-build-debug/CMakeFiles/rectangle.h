@@ -35,7 +35,6 @@ public:
         return psCode;
     }
 
-
 private:
     double _width;
     double _height;
