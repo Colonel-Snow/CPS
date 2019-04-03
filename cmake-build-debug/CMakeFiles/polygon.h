@@ -59,17 +59,17 @@ public:
         std::string psCode;
         // horizontal line
         if(_numSides == 1){
-            psCode = " newpath \n 72 72  moveto \n" + std::to_string(_sideLength) + " 0 rlineto \n stroke \n closepath \n showpage \n";
+            psCode = " newpath \n 72 72  moveto \n" + std::to_string(_sideLength) + " 0 rlineto \n closepath \n";
         }
         // triangle
         else if(_numSides == 3){
             psCode = " newpath \n 72 72 moveto \n" + std::to_string(_sideLength) + " 0 rlineto \n"
-            + std::to_string(72/2) + " " + std::to_string(_sideLength*sqrt(3)/2) + " rlineto \n closepath \n stroke \n showpage \n";
+            + std::to_string(72/2) + " " + std::to_string(_sideLength*sqrt(3)/2) + " rlineto \n closepath \n";
         }
         // square
         else if(_numSides == 4){
             psCode = " newpath \n 72 72 moveto \n 0 " + std::to_string(_sideLength) + " rlineto \n "
-                    + std::to_string(_sideLength) + " 0 rlineto \n 0 " + std::to_string(_sideLength) + " rlineto \n closepath \n stroke \n showpage \n";
+                    + std::to_string(_sideLength) + " 0 rlineto \n 0 " + std::to_string((-1)*(_sideLength)) + " rlineto \n closepath \n";
         }
         return psCode;
     }

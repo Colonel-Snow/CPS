@@ -36,7 +36,7 @@ public:
 
     std::string evaluate(){
         std::string psCode;
-        psCode = " newpath \n 180 252 " + std::to_string(_radius) + " 0 360 arc \n closepath \n stoke \n";
+        psCode = " newpath \n 180 252 " + std::to_string(_radius) + " 0 360 arc \n closepath \n";
         return psCode;
     }
     

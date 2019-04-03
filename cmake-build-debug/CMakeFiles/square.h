@@ -32,7 +32,7 @@ public:
     }
     std::string evaluate(){
         std::string psCode = " newpath \n 72 72 moveto \n 0 " + std::to_string(_sideLength) + " rlineto \n "
-                 + std::to_string(_sideLength) + " 0 rlineto \n 0 " + std::to_string(_sideLength) + " rlineto \n closepath \n stroke \n showpage \n";
+                 + std::to_string(_sideLength) + " 0 rlineto \n 0 " + std::to_string((-1)*(_sideLength)) + " rlineto \n closepath \n";
         return psCode;
     }
 
