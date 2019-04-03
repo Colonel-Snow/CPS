@@ -49,7 +49,7 @@ public:
             + "rmoveto\n";
             psCode += shapes.evaluate() += "\n";
             psCode +=  std::to_string(shapes.getWidth()) + " "
-            + std::to_string((shapes.getHeight() - getHeight()) / 2) + " "
+            + std::to_string((shapes.getHeight() - shapes.getHeight()) / 2) + " "
             + "rmoveto\n"
             + "\n";
         }

@@ -49,8 +49,8 @@ public:
             psCode += std::to_string(shapes.getWidth() / 2) + " "
             + std::to_string(shapes.getHeight() / 2) + " "
             + "rmoveto\n";
-            psCode += std::to_string(- getWidth() / 2) + " "
-            + std::to_string(- getHeight() / 2) + " "
+            psCode += std::to_string(- shapes.getWidth() / 2) + " "
+            + std::to_string(- shapes.getHeight() / 2) + " "
             + "rmoveto\n";
         }
         return psCode;

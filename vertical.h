@@ -50,10 +50,9 @@ public:
             + std::to_string(shapes.getHeight() / 2) + " "
             + "rmoveto\n";
             psCode += shapes.evaluate() += "\n";
-            psCode +=  std::to_string((shapes.getWidth() - getWidth()) / 2) + " "
-            + std::to_string(shapes.getHeight()) + " "
-            + "rmoveto\n"
-            + "\n";
+            psCode +=  std::to_string((shapes.getWidth() - shapes.getWidth()) / 2)
+            + " " + std::to_string(shapes.getHeight()) + " "
+            + "rmoveto\n" + "\n";
         }
         return psCode;
     }
