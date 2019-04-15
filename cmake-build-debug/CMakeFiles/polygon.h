@@ -8,8 +8,6 @@
 #include "Shape.h"
 #ifndef polygon_h
 #define polygon_h
-#include <cmath>
-#include <string>
 class Polygon: public Shape{
 public:
     Polygon(int numSides, double sideLength): _numSides(numSides),_sideLength(sideLength)

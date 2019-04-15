@@ -8,15 +8,11 @@
 
 #ifndef triangle_h
 #define triangle_h
-#include  <string>
 
-class Triangle: public Shape{
+class Triangle: public Polygon{
 public:
-    Triangle(double sideLength):_sideLength(sideLength)
-    {
-        _height = getHeight();
-        _width = getWidth();
-    }
+    explicit Triangle(double sideLength):Polygon(3, sideLength)
+    {}
     
     void setHeight(double sideLength){
         _height = sideLength*sqrt(3)/2;

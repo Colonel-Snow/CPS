@@ -8,12 +8,9 @@
 
 #ifndef square_h
 #define square_h
-#include "polygon.h"
-#include <string>
-
-class Square: public Shape{
+class Square: public Polygon{
 public:
-    Square(double sideLength):_sideLength(sideLength)
+    explicit Square(double sideLength):Polygon(4, sideLength)
     {}
     
     void setHeight(double height){

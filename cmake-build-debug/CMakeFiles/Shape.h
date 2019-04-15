@@ -7,8 +7,10 @@
 #include <functional>
 #include <cstdarg>
 #include <algorithm>
+using std::max;
 #include <type_traits>
 #include <string>
+#include <cmath>
 
 #ifndef CPS_SHAPE_H
 #define CPS_SHAPE_H

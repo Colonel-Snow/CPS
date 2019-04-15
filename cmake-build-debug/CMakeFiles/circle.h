@@ -5,10 +5,8 @@
 //  Created by Erin Tolman on 3/25/19.
 //  Copyright © 2019 Erin Tolman. All rights reserved.
 //
-
 #ifndef circle_h
 #define circle_h
-#include <string>
 class Circle: public Shape{
 public:
     Circle(double radius):_radius(radius)

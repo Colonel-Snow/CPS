@@ -5,8 +5,6 @@
 //  Created by Erin Tolman on 4/1/19.
 //  Copyright © 2019 Erin Tolman. All rights reserved.
 //
-#include <algorithm>
-using std::max;
 #ifndef vertical_h
 #define vertical_h
 class Vertical: public Shape{

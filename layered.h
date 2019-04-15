@@ -5,8 +5,7 @@
 //  Created by Erin Tolman on 4/1/19.
 //  Copyright © 2019 Erin Tolman. All rights reserved.
 //
-#include <algorithm>
-using std::max;
+
 #ifndef layered_h
 #define layered_h
 class Layered: public Shape{

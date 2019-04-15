@@ -5,8 +5,6 @@
 //  Created by Erin Tolman on 4/1/19.
 //  Copyright © 2019 Erin Tolman. All rights reserved.
 //
-#include <algorithm>
-using std::max;
 #ifndef horizontal_h
 #define horizontal_h
 class Horizontal: public Shape{
