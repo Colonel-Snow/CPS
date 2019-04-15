@@ -13,8 +13,8 @@ class Circle: public Shape{
 public:
     Circle(double radius):_radius(radius)
     {
-        _height = getHeight();
-        _width = getWidth();
+        setHeight(radius);
+        setWidth(radius);
     }
 
     void setHeight(double radius){
@@ -26,11 +26,9 @@ public:
 
     double getHeight()
     {
-        setHeight(_radius);
         return _height;
     }
     double getWidth(){
-        setWidth(_radius);
         return _width;
     }
 

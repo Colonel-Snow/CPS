@@ -8,6 +8,7 @@
 #include <cstdarg>
 #include <algorithm>
 #include <type_traits>
+#include <string>
 
 #ifndef CPS_SHAPE_H
 #define CPS_SHAPE_H
