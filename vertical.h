@@ -42,14 +42,14 @@ public:
         return _width;
     }
     
-    std::string evaluate(){
+    std::string generatePostScript(){
         std::string psCode = "";
         for(auto allShapes : _collectionOfShapes){
             const Shape & shapes = allShapes.get();
             psCode += std::to_string(shapes.getWidth() / 2) + " "
             + std::to_string(shapes.getHeight() / 2) + " "
             + "rmoveto\n";
-            psCode += shapes.evaluate() += "\n";
+            psCode += shapes.generatePostScript() += "\n";
             psCode +=  std::to_string((shapes.getWidth() - shapes.getWidth()) / 2)
             + " " + std::to_string(shapes.getHeight()) + " "
             + "rmoveto\n" + "\n";

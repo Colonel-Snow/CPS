@@ -30,7 +30,7 @@ public:
         setWidth(_sideLength);
         return _width;
     }
-    std::string evaluate(){
+    std::string generatePostScript(){
         std::string psCode = " newpath \n 72 72 moveto \n 0 " + std::to_string(_sideLength) + " rlineto \n "
                  + std::to_string(_sideLength) + " 0 rlineto \n 0 " + std::to_string((-1)*(_sideLength)) + " rlineto \n closepath \n";
         return psCode;

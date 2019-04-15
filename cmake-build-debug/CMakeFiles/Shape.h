@@ -23,7 +23,7 @@ public:
     void setCenterPoint();
     double getHeight() const {return _height;}
     double getWidth() const {return _width;}
-    virtual std::string evaluate() const{return "\n";}
+    virtual std::string generatePostScript() const{return "\n";}
     virtual ~Shape() = default;
 private:
     std::string _filename;

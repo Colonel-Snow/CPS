@@ -55,7 +55,7 @@ public:
         setWidth(_numSides);
         return _width;
     }
-    std::string evaluate(){
+    std::string generatePostScript(){
         std::string psCode;
         // horizontal line
         if(_numSides == 1){

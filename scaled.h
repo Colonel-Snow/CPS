@@ -29,10 +29,10 @@ public:
         setWidth(_width);
         return _width;
     }
-    std::string evaluate(){
+    std::string generatePostScript(){
         std::string psCode = std::to_string(_scaleFactor_X) + " "
         + std::to_string(_scaleFactor_Y) + " scale\n"
-        + _shape.evaluate();
+        + _shape.generatePostScript();
         return psCode;
     }
 private:

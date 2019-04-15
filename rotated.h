@@ -37,8 +37,8 @@ public:
         return _width;
     }
     
-    std::string evaluate(){
-        std::string psCode = std::to_string(_rotationAngle) + " rotate\n" + _shape.evaluate() + std::to_string(- _rotationAngle) + " rotate\n";
+    std::string generatePostScript(){
+        std::string psCode = std::to_string(_rotationAngle) + " rotate\n" + _shape.generatePostScript() + std::to_string(- _rotationAngle) + " rotate\n";
         return psCode;
     }
 private:
