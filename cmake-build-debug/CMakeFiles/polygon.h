@@ -69,6 +69,13 @@ public:
             psCode = " newpath \n 72 72 moveto \n 0 " + std::to_string(_sideLength) + " rlineto \n "
                     + std::to_string(_sideLength) + " 0 rlineto \n 0 " + std::to_string((-1)*(_sideLength)) + " rlineto \n closepath \n";
         }
+        else{
+            psCode = " newpath\n" + std::to_string(- _sideLength /2) + " "
+            + std::to_string(- getHeight() / 2) + " moveto\n" + " 1 1 " +
+            std::to_string(_numSides) + " {\n" + std::to_string(_sideLength) +
+            " 0 rlineto\n" + std::to_string(360.0 / _numSides) + " rotate\n"
+            + "} for\n" + "clear\n";
+        }
         return psCode;
     }
 private:

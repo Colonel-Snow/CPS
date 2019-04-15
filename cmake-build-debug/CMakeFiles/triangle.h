@@ -33,7 +33,6 @@ public:
                  + std::to_string(72/2) + " " + std::to_string(_sideLength*sqrt(3)/2) + " rlineto \n closepath \n";
         return psCode;
     }
-
     
 private:
     double _height;
