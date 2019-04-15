@@ -22,11 +22,9 @@ public:
         _width = width;
     }
     double getHeight(){
-        setHeight(_height);
         return _height;
     }
     double getWidth(){
-        setWidth(_width);
         return _width;
     }
     std::string generatePostScript(){

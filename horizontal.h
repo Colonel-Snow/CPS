@@ -13,7 +13,7 @@ class Horizontal: public Shape{
 public:
     template <typename Arg, typename... Ts,
     typename std::enable_if<std::is_base_of<Shape,Arg>::value>::type * = nullptr>
-    Horizontal(Arg &i, Ts &... all)
+    explicit Horizontal(Arg &i, Ts &... all)
     {
         _collectionOfShapes = {i, all... };
         double height = 0;
@@ -24,6 +24,8 @@ public:
             height = max(height, shapes.getHeight());
             width += shapes.getWidth();
         }
+        setWidth(width);
+        setHeight(height);
     }
     void setHeight(double height){
         _height = height;
@@ -32,11 +34,9 @@ public:
         _width = width;
     }
     double getHeight(){
-        setHeight(_height);
         return _height;
     }
     double getWidth(){
-        setWidth(_width);
         return _width;
     }
     
