@@ -27,6 +27,7 @@ public:
         setWidth(width);
         setHeight(height);
     }
+    
     void setHeight(double height){
         _height = height;
     }
@@ -44,14 +45,12 @@ public:
         std::string psCode = "";
         for(auto allShapes : _collectionOfShapes){
             const Shape & shapes = allShapes.get();
-            psCode += std::to_string(shapes.getWidth() / 2) + " "
-            + std::to_string(shapes.getHeight() / 2) + " "
-            + "rmoveto\n";
-            psCode += shapes.generatePostScript() += "\n";
-            psCode +=  std::to_string(shapes.getWidth()) + " "
-            + std::to_string((shapes.getHeight() - shapes.getHeight()) / 2) + " "
-            + "rmoveto\n"
-            + "\n";
+            psCode += std::to_string(shapes.getWidth() / 2) + " 0 "
+            + "translate\n";
+            psCode += "gsave\n" + shapes.generatePostScript();
+            psCode +=  "grestore\n\n";
+            psCode += std::to_string(shapes.getWidth() / 2) + " 0 "
+            + "translate\n\n";
         }
         return psCode;
     }

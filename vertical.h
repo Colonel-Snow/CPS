@@ -44,13 +44,12 @@ public:
         std::string psCode = "";
         for(auto allShapes : _collectionOfShapes){
             const Shape & shapes = allShapes.get();
-            psCode += std::to_string(shapes.getWidth() / 2) + " "
-            + std::to_string(shapes.getHeight() / 2) + " "
-            + "rmoveto\n";
-            psCode += shapes.generatePostScript() += "\n";
-            psCode +=  std::to_string((shapes.getWidth() - shapes.getWidth()) / 2)
-            + " " + std::to_string(shapes.getHeight()) + " "
-            + "rmoveto\n" + "\n";
+            psCode += "0 " + std::to_string(shapes.getHeight() / 2) + " "
+            + "translate\n";
+            psCode += shapes.generatePostScript() += "gsave\n" + shapes.generatePostScript();
+            psCode += "grestore\n\n";
+            psCode +=  "0 " + std::to_string(shapes.getHeight() / 2)
+            + " " + "translate\n" + "\n";
         }
         return psCode;
     }
