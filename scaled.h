@@ -12,8 +12,8 @@ class Scaled: public Shape{
 public:
     Scaled(Shape shape, double scaleFactor_X, double scaleFactor_Y):_shape(shape), _scaleFactor_X(scaleFactor_X), _scaleFactor_Y(scaleFactor_Y)
     {
-        setHeight(shape.getHeight() * scaleFactor_Y);
-        setWidth(shape.getWidth() * scaleFactor_X);
+        setHeight(_shape.getHeight() * scaleFactor_Y);
+        setWidth(_shape.getWidth() * scaleFactor_X);
     }
     
     void setHeight(double height){
@@ -30,11 +30,12 @@ public:
     }
     
     std::string generatePostScript(){
-        std::string psCode = std::to_string(_scaleFactor_X) + " "
+        std::string psCode = "gsave\n" + std::to_string(_scaleFactor_X) + " "
         + std::to_string(_scaleFactor_Y) + " scale\n"
-        + _shape.generatePostScript();
+        + _shape.generatePostScript() + "grestore\n";
         return psCode;
     }
+    
 private:
     double _height;
     double _width;

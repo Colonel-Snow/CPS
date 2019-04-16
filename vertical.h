@@ -39,12 +39,15 @@ public:
     }
     
     std::string generatePostScript(){
-        std::string psCode = "";
-        for(auto allShapes : _collectionOfShapes){
+        std::string psCode;
+        psCode += "0 " + std::to_string(- getHeight() / 2)
+        + " translate\n";
+        for(auto allShapes : _collectionOfShapes)
+        {
             const Shape & shapes = allShapes.get();
             psCode += "0 " + std::to_string(shapes.getHeight() / 2) + " "
             + "translate\n";
-            psCode += shapes.generatePostScript() += "gsave\n" + shapes.generatePostScript();
+            psCode += "gsave\n" + shapes.generatePostScript();
             psCode += "grestore\n\n";
             psCode +=  "0 " + std::to_string(shapes.getHeight() / 2)
             + " " + "translate\n" + "\n";
