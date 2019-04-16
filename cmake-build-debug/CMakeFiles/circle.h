@@ -9,7 +9,7 @@
 #define circle_h
 class Circle: public Shape{
 public:
-    Circle(double radius):_radius(radius)
+    explicit Circle(double radius):_radius(radius)
     {
         setHeight(radius);
         setWidth(radius);
@@ -22,11 +22,12 @@ public:
         _width = 2*radius;
     }
 
-    double getHeight()
+    double getHeight() const
     {
         return _height;
     }
-    double getWidth(){
+    double getWidth() const
+    {
         return _width;
     }
 

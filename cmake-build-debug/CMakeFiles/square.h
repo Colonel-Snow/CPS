@@ -13,7 +13,9 @@ public:
     explicit Square(double sideLength):Polygon(4, sideLength)
     {}
     
-    void setHeight(double height){
+    //Do all functions still work if they are called from polygon?
+    
+    /*void setHeight(double height){
         _height = height;
     }
     void setWidth(double width){
@@ -31,7 +33,7 @@ public:
         std::string psCode = " newpath \n 72 72 moveto \n 0 " + std::to_string(_sideLength) + " rlineto \n "
                  + std::to_string(_sideLength) + " 0 rlineto \n 0 " + std::to_string((-1)*(_sideLength)) + " rlineto \n closepath \n";
         return psCode;
-    }
+    }*/
 
 private:
     double _height;

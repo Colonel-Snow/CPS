@@ -18,18 +18,23 @@ using std::max;
 
 class Shape {
 public:
-    Shape():_filename("CtoPS.ps"), _currentPoint(306,396)
-    {}
+    Shape():_filename("CtoPS.txt"), _centerPoint(306, 396),
+            _height(72), _width(72){};
+    
     void setHeight(double height) {_height = height;}
     void setWidth(double width) {_width = width;}
-    void setCenterPoint();
+    void setCenterPoint(double x, double y) {_centerPoint = std::make_pair(x,y);}
+    
     double getHeight() const {return _height;}
     double getWidth() const {return _width;}
-    virtual std::string generatePostScript() const{return "\n";}
+    std::pair<double, double> getCenterPoint() const {return _centerPoint;}
+    
+    virtual std::string generatePostScript() const {return "\n";}
     virtual ~Shape() = default;
+    
 private:
     std::string _filename;
-    std::pair<double, double> _currentPoint;
+    std::pair<double, double> _centerPoint;
     double _height;
     double _width;
 };

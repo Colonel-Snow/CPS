@@ -21,11 +21,9 @@ public:
         _width = sideLength;
     }
     double getHeight(){
-        setHeight(_sideLength);
         return _height;
     }
     double getWidth(){
-        setWidth(_sideLength);
         return _width;
     }
     std::string generatePostScript(){

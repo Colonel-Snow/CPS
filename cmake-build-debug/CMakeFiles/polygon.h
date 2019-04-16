@@ -28,8 +28,7 @@ public:
         }
         else
             _height = 0;
-    }
-    
+    }    
     void setWidth(int sides){
         if(_numSides % 2 == 1){
             _width = (_sideLength * sin(M_PI*(_numSides-1)/(2*_numSides)))/(sin(M_PI/_numSides));
@@ -44,15 +43,23 @@ public:
             _width = 0;
     }
     
-    double getHeight(){
-        setHeight(_numSides);
+    double getHeight() const
+    {
         return _height;
     }
-    
-    double getWidth(){
-        setWidth(_numSides);
+    double getWidth() const
+    {
         return _width;
     }
+    int getNumSides() const
+    {
+        return _numSides;
+    }
+    double getSidelength() const
+    {
+        return _sideLength;
+    }
+    
     std::string generatePostScript(){
         std::string psCode;
         // horizontal line
@@ -74,7 +81,7 @@ public:
             + std::to_string(- getHeight() / 2) + " moveto\n" + " 1 1 " +
             std::to_string(_numSides) + " {\n" + std::to_string(_sideLength) +
             " 0 rlineto\n" + std::to_string(360.0 / _numSides) + " rotate\n"
-            + "} for\n" + "clear\n";
+            + "} for\n" + "clear\n" + "closepath\n" + "stroke\n";
         }
         return psCode;
     }

@@ -10,6 +10,7 @@
 class Rectangle: public Shape{
 public:
     Rectangle(double width, double height):_width(width),_height(height){}
+    
     void setHeight(double height){
         _height = height;
     }
@@ -17,11 +18,9 @@ public:
         _width = width;
     }
     double getHeight(){
-        setHeight(_height);
         return _height;
     }
     double getWidth(){
-        setWidth(_width);
         return _width;
     }
     std::string generatePostScript() {
