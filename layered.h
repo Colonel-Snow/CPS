@@ -41,7 +41,7 @@ public:
     std::string generatePostScript(){
         std::string psCode;
         for(auto allShapes : _collectionOfShapes){
-            const Shape & shapes = allShapes.get();
+            Shape & shapes = allShapes.get();
             psCode += "gsave\n" + shapes.generatePostScript();
             psCode += " grestore\n\n";
         }
@@ -51,7 +51,7 @@ public:
 private:
     double _height;
     double _width;
-    std::vector<std::reference_wrapper<const Shape>> _collectionOfShapes;
+    std::vector<std::reference_wrapper<Shape>> _collectionOfShapes;
 };
 
 #endif /* layered_h */

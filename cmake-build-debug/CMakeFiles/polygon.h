@@ -43,23 +43,6 @@ public:
             _width = 0;
     }
     
-    double getHeight() const
-    {
-        return _height;
-    }
-    double getWidth() const
-    {
-        return _width;
-    }
-    int getNumSides() const
-    {
-        return _numSides;
-    }
-    double getSidelength() const
-    {
-        return _sideLength;
-    }
-    
     std::string generatePostScript(){
         std::string psCode;
         // horizontal line

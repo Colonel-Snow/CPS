@@ -23,20 +23,6 @@ public:
         }
     }
     
-    void setHeight(double height){
-        _height = height;
-    }
-    void setWidth(double width){
-        _width = width;
-    }
-    
-    double getHeight() const{
-        return _height;
-    }
-    double getWidth() const{
-        return _width;
-    }
-    
     std::string generatePostScript(){
         std::string psCode = std::to_string(_rotationAngle) + " rotate\n" + _shape.generatePostScript() + std::to_string(- _rotationAngle) + " rotate\n";
         return psCode;
@@ -44,7 +30,7 @@ public:
 private:
     double _height;
     double _width;
-    const Shape & _shape;
+    Shape & _shape;
     int _rotationAngle;
 };
 

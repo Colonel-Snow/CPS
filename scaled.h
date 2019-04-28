@@ -16,19 +16,6 @@ public:
         setWidth(_shape.getWidth() * scaleFactor_X);
     }
     
-    void setHeight(double height){
-        _height = height;
-    }
-    void setWidth(double width){
-        _width = width;
-    }
-    double getHeight(){
-        return _height;
-    }
-    double getWidth(){
-        return _width;
-    }
-    
     std::string generatePostScript(){
         std::string psCode = "gsave\n" + std::to_string(_scaleFactor_X) + " "
         + std::to_string(_scaleFactor_Y) + " scale\n"
@@ -39,7 +26,7 @@ public:
 private:
     double _height;
     double _width;
-    const Shape & _shape;
+    Shape & _shape;
     double _scaleFactor_X;
     double _scaleFactor_Y;
 };

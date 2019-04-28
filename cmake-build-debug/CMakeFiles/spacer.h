@@ -14,18 +14,7 @@ public:
     Spacer(double width, double height):_width(width),_height(height)
     {}
     
-    void setHeight(double height){
-        _height = height;
-    }
-    void setWidth(double width){
-        _width = width;
-    }
-    double getHeight(){
-        return _height;
-    }
-    double getWidth(){
-        return _width;
-    }
+   
     std::string generatePostScript() {
         std::string psCode;
         psCode = " newpath \n 72 72 moveto \n 0 " + std::to_string(this->_height) + " rlineto \n" + std::to_string(this->_width)

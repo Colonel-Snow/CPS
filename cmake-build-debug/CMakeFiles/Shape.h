@@ -29,7 +29,7 @@ public:
     double getWidth() const {return _width;}
     std::pair<double, double> getCenterPoint() const {return _centerPoint;}
     
-    virtual std::string generatePostScript() const {return "\n";}
+    virtual std::string generatePostScript() {return "\n";}
     virtual ~Shape() = default;
     
 private:
